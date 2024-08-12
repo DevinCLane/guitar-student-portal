@@ -23,7 +23,7 @@ export const user = pgTable("users", {
 export const lessons = pgTable("lessons", {
     id: serial("id").primaryKey(),
     title: varchar("title", { length: 255 }).notNull(),
-    description: text("description"),
+    content: text("content"),
     date: timestamp("date").notNull(),
     createdAt: timestamp("created_at", { mode: "string" })
         .notNull()
