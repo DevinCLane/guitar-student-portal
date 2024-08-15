@@ -1,7 +1,7 @@
 import { drizzle } from "drizzle-orm/postgres-js";
 import postgres from "postgres";
 
-const connectionString = process.env.DATABASE_URL || "";
+const connectionString = process.env.NEXT_PUBLIC_SUPABASE_URL || "";
 if (!connectionString) {
     throw new Error("DATABASE_URL is not defined");
 }
