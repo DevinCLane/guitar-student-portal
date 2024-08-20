@@ -11,7 +11,7 @@ const font = DM_Serif_Text({
 
 export default async function Home() {
     let session = await auth();
-    let user = session?.user?.email;
+    let user = session?.user?.name;
 
     return (
         <main className="flex min-h-screen flex-col items-center justify-center p-24 gap-8 bg-gradient-to-r from-rose-100 to-teal-100">

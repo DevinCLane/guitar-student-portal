@@ -1,4 +1,5 @@
 import { signOut } from "@/auth";
+import { Button } from "./ui/button";
 
 export function SignOut({ children }: { children: React.ReactNode }) {
     return (
@@ -10,7 +11,7 @@ export function SignOut({ children }: { children: React.ReactNode }) {
             }}
         >
             <p>{children}</p>
-            <button type="submit">Sign Out</button>
+            <Button type="submit">Sign Out</Button>
         </form>
     );
 }
