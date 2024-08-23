@@ -5,14 +5,14 @@ interface Lesson {
     createdAt: string;
 }
 
-interface LessonProps {
-    lesson: Lesson[];
+interface LessonsProps {
+    lessons: Lesson[];
 }
 
-const Lessons: React.FC<LessonProps> = ({ lesson }) => {
+const LessonsList: React.FC<LessonsProps> = ({ lessons }) => {
     return (
         <div>
-            {lesson.map((lesson) => (
+            {lessons.map((lesson) => (
                 <section key={lesson.id}>
                     <h3>{lesson.title}</h3>
                     <p>{lesson.content}</p>
@@ -22,3 +22,5 @@ const Lessons: React.FC<LessonProps> = ({ lesson }) => {
         </div>
     );
 };
+
+export default LessonsList;

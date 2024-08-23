@@ -13,6 +13,8 @@
   "dependencies": {
     "@next/env": "^14.2.5",
     "@radix-ui/react-slot": "^1.1.0",
+    "@udecode/cn": "^33.0.0",
+    "@udecode/plate": "^36.5.7",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.1",
     "drizzle-orm": "^0.33.0",
@@ -22,6 +24,10 @@
     "postgres": "^3.4.4",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
+    "slate": "^0.103.0",
+    "slate-history": "^0.109.0",
+    "slate-hyperscript": "^0.100.0",
+    "slate-react": "^0.109.0",
     "tailwind-merge": "^2.5.2",
     "tailwindcss-animate": "^1.0.7"
   },

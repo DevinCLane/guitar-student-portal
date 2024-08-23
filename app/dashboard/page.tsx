@@ -1,4 +1,5 @@
 import { auth } from "@/auth";
+import LessonEditor from "@/components/lesson-editor";
 import SignIn from "@/components/sign-in";
 import { SignOut } from "@/components/sign-out";
 import { cn } from "@/lib/utils";
@@ -15,6 +16,7 @@ export default async function DashboardPage() {
             <section>
                 {user ? <SignOut>{`Welcome ${user}`}</SignOut> : <SignIn />}
             </section>
+            <LessonEditor />
         </main>
     );
 }
