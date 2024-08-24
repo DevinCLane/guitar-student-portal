@@ -340,19 +340,11 @@ const plugins = createPlugins(
     }
 );
 
-const initialValue = [
-    {
-        id: "1",
-        type: "p",
-        children: [{ text: "Hello, World!" }],
-    },
-];
-
 export function LessonEditor() {
     return (
         <DndProvider backend={HTML5Backend}>
             <CommentsProvider users={{}} myUserId="1">
-                <Plate plugins={plugins} initialValue={initialValue}>
+                <Plate plugins={plugins}>
                     <FixedToolbar>
                         <FixedToolbarButtons />
                     </FixedToolbar>
