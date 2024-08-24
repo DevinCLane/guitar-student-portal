@@ -11,12 +11,7 @@ import {
     createBlockquotePlugin,
     ELEMENT_BLOCKQUOTE,
 } from "@udecode/plate-block-quote";
-import {
-    createCodeBlockPlugin,
-    ELEMENT_CODE_BLOCK,
-    ELEMENT_CODE_LINE,
-    ELEMENT_CODE_SYNTAX,
-} from "@udecode/plate-code-block";
+
 import {
     createHorizontalRulePlugin,
     ELEMENT_HR,
@@ -51,11 +46,7 @@ import {
     ELEMENT_H5,
     ELEMENT_H6,
 } from "@udecode/plate-heading";
-import {
-    createMentionPlugin,
-    ELEMENT_MENTION,
-    ELEMENT_MENTION_INPUT,
-} from "@udecode/plate-mention";
+
 import {
     createTablePlugin,
     ELEMENT_TABLE,
@@ -125,9 +116,6 @@ import { DndProvider } from "react-dnd";
 import { HTML5Backend } from "react-dnd-html5-backend";
 
 import { BlockquoteElement } from "@/components/plate-ui/blockquote-element";
-import { CodeBlockElement } from "@/components/plate-ui/code-block-element";
-import { CodeLineElement } from "@/components/plate-ui/code-line-element";
-import { CodeSyntaxLeaf } from "@/components/plate-ui/code-syntax-leaf";
 import { ExcalidrawElement } from "@/components/plate-ui/excalidraw-element";
 import { HrElement } from "@/components/plate-ui/hr-element";
 import { ImageElement } from "@/components/plate-ui/image-element";
@@ -138,8 +126,6 @@ import { ColumnGroupElement } from "@/components/plate-ui/column-group-element";
 import { ColumnElement } from "@/components/plate-ui/column-element";
 import { HeadingElement } from "@/components/plate-ui/heading-element";
 import { MediaEmbedElement } from "@/components/plate-ui/media-embed-element";
-import { MentionElement } from "@/components/plate-ui/mention-element";
-import { MentionInputElement } from "@/components/plate-ui/mention-input-element";
 import { ParagraphElement } from "@/components/plate-ui/paragraph-element";
 import { TableElement } from "@/components/plate-ui/table-element";
 import { TableRowElement } from "@/components/plate-ui/table-row-element";
@@ -148,8 +134,6 @@ import {
     TableCellHeaderElement,
 } from "@/components/plate-ui/table-cell-element";
 import { TodoListElement } from "@/components/plate-ui/todo-list-element";
-import { InlineDateElement } from "@/components/plate-ui/inline-date-element";
-import { CodeLeaf } from "@/components/plate-ui/code-leaf";
 import { CommentLeaf } from "@/components/plate-ui/comment-leaf";
 import { CommentsPopover } from "@/components/plate-ui/comments-popover";
 import { HighlightLeaf } from "@/components/plate-ui/highlight-leaf";
@@ -166,7 +150,6 @@ import { EmojiInputElement } from "@/components/plate-ui/emoji-input-element";
 const plugins = createPlugins(
     [
         createBlockquotePlugin(),
-        createCodeBlockPlugin(),
         createHorizontalRulePlugin(),
         createLinkPlugin({
             renderAfterEditable: LinkFloatingToolbar as RenderAfterEditable,
@@ -178,7 +161,6 @@ const plugins = createPlugins(
         createParagraphPlugin(),
         createHeadingPlugin(),
         createMediaEmbedPlugin(),
-        createMentionPlugin(),
         createTablePlugin(),
         createTodoListPlugin(),
         createInlineDatePlugin(),
@@ -324,9 +306,6 @@ const plugins = createPlugins(
         components: withDraggables(
             withPlaceholders({
                 [ELEMENT_BLOCKQUOTE]: BlockquoteElement,
-                [ELEMENT_CODE_BLOCK]: CodeBlockElement,
-                [ELEMENT_CODE_LINE]: CodeLineElement,
-                [ELEMENT_CODE_SYNTAX]: CodeSyntaxLeaf,
                 [ELEMENT_EXCALIDRAW]: ExcalidrawElement,
                 [ELEMENT_HR]: HrElement,
                 [ELEMENT_IMAGE]: ImageElement,
@@ -341,17 +320,13 @@ const plugins = createPlugins(
                 [ELEMENT_H5]: withProps(HeadingElement, { variant: "h5" }),
                 [ELEMENT_H6]: withProps(HeadingElement, { variant: "h6" }),
                 [ELEMENT_MEDIA_EMBED]: MediaEmbedElement,
-                [ELEMENT_MENTION]: MentionElement,
-                [ELEMENT_MENTION_INPUT]: MentionInputElement,
                 [ELEMENT_PARAGRAPH]: ParagraphElement,
                 [ELEMENT_TABLE]: TableElement,
                 [ELEMENT_TR]: TableRowElement,
                 [ELEMENT_TD]: TableCellElement,
                 [ELEMENT_TH]: TableCellHeaderElement,
                 [ELEMENT_TODO_LI]: TodoListElement,
-                [ELEMENT_INLINE_DATE]: InlineDateElement,
                 [MARK_BOLD]: withProps(PlateLeaf, { as: "strong" }),
-                [MARK_CODE]: CodeLeaf,
                 [MARK_COMMENT]: CommentLeaf,
                 [MARK_HIGHLIGHT]: HighlightLeaf,
                 [MARK_ITALIC]: withProps(PlateLeaf, { as: "em" }),
@@ -373,7 +348,7 @@ const initialValue = [
     },
 ];
 
-export function PlateEditor() {
+export function LessonEditor() {
     return (
         <DndProvider backend={HTML5Backend}>
             <CommentsProvider users={{}} myUserId="1">

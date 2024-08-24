@@ -1,5 +1,5 @@
 import { auth } from "@/auth";
-import LessonEditor from "@/components/lesson-editor";
+import { LessonEditor } from "@/components/lesson-editor";
 import SignIn from "@/components/sign-in";
 import { SignOut } from "@/components/sign-out";
 import { cn } from "@/lib/utils";
