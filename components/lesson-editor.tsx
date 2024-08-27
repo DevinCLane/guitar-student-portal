@@ -28,11 +28,7 @@ import {
     ELEMENT_EXCALIDRAW,
 } from "@udecode/plate-excalidraw";
 import { createTogglePlugin, ELEMENT_TOGGLE } from "@udecode/plate-toggle";
-import {
-    createColumnPlugin,
-    ELEMENT_COLUMN_GROUP,
-    ELEMENT_COLUMN,
-} from "@udecode/plate-layout";
+
 import {
     createParagraphPlugin,
     ELEMENT_PARAGRAPH,
@@ -122,8 +118,6 @@ import { ImageElement } from "@/components/plate-ui/image-element";
 import { LinkElement } from "@/components/plate-ui/link-element";
 import { LinkFloatingToolbar } from "@/components/plate-ui/link-floating-toolbar";
 import { ToggleElement } from "@/components/plate-ui/toggle-element";
-import { ColumnGroupElement } from "@/components/plate-ui/column-group-element";
-import { ColumnElement } from "@/components/plate-ui/column-element";
 import { HeadingElement } from "@/components/plate-ui/heading-element";
 import { MediaEmbedElement } from "@/components/plate-ui/media-embed-element";
 import { ParagraphElement } from "@/components/plate-ui/paragraph-element";
@@ -157,7 +151,6 @@ const plugins = createPlugins(
         createImagePlugin(),
         createExcalidrawPlugin(),
         createTogglePlugin(),
-        createColumnPlugin(),
         createParagraphPlugin(),
         createHeadingPlugin(),
         createMediaEmbedPlugin(),
@@ -311,8 +304,6 @@ const plugins = createPlugins(
                 [ELEMENT_IMAGE]: ImageElement,
                 [ELEMENT_LINK]: LinkElement,
                 [ELEMENT_TOGGLE]: ToggleElement,
-                [ELEMENT_COLUMN_GROUP]: ColumnGroupElement,
-                [ELEMENT_COLUMN]: ColumnElement,
                 [ELEMENT_H1]: withProps(HeadingElement, { variant: "h1" }),
                 [ELEMENT_H2]: withProps(HeadingElement, { variant: "h2" }),
                 [ELEMENT_H3]: withProps(HeadingElement, { variant: "h3" }),
