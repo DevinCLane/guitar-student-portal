@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { DM_Serif_Text, Inter } from "next/font/google";
 import "./globals.css";
 import { cn } from "@/lib/utils";
-import { TooltipProvider } from "@/components/plate-ui/tooltip";
 
 const inter = Inter({
     subsets: ["latin"],
@@ -34,13 +33,7 @@ export default function RootLayout({
                     dmSerif.variable
                 )}
             >
-                <TooltipProvider
-                    disableHoverableContent
-                    delayDuration={500}
-                    skipDelayDuration={0}
-                >
-                    {children}
-                </TooltipProvider>
+                {children}
             </body>
         </html>
     );
