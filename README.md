@@ -1,13 +1,14 @@
 # Guitar Lesson Notes
 
-A web application for guitar teachers to create note for their students.
+A web application for guitar teachers to create lesson plans for their students.
 
 Using:
 
 -   Next.js
 -   Auth.js for auth
--   Drizzle ORM for postgres
--   Supabase
+-   Drizzle ORM to interact with postgres
+-   Supabase for the database
+-   [Plate](https://platejs.org/) for rich text editing
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
