@@ -1,15 +1,14 @@
-import {
-    usePlateEditor,
-    Plate,
-    PlateContent,
-} from "@udecode/plate-common/react";
+"use client";
+import { Plate, usePlateEditor } from "@udecode/plate-common/react";
 
-export default function BasicEditor() {
+import { Editor } from "@/components/plate-ui/editor";
+
+export function LessonEditor() {
     const editor = usePlateEditor();
 
     return (
         <Plate editor={editor}>
-            <PlateContent placeholder="Type..." />
+            <Editor placeholder="Type..." />
         </Plate>
     );
 }
