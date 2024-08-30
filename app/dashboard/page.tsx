@@ -2,6 +2,7 @@ import { auth } from "@/auth";
 import { LessonEditor } from "@/components/lesson-editor";
 import SignIn from "@/components/sign-in";
 import { SignOut } from "@/components/sign-out";
+import { Button } from "@/components/ui/button";
 
 export default async function DashboardPage() {
     let session = await auth();
@@ -16,6 +17,7 @@ export default async function DashboardPage() {
                 {user ? <SignOut>{`Welcome ${user}`}</SignOut> : <SignIn />}
             </section>
             <LessonEditor />
+            <Button>Post</Button>
         </main>
     );
 }
